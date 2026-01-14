@@ -1,15 +1,361 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>VidaJove información</title>
-  <link rel="stylesheet" href="estilo.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VidaJove - Bienvenido</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            background: white;
+            padding: 20px 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #667eea;
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #667eea;
+        }
+
+        /* Main Content */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        /* Welcome Section */
+        .welcome-box {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .welcome-box h1 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 32px;
+        }
+
+        .welcome-text {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        /* News Section */
+        .news-section {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .news-section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .news-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 4px solid #667eea;
+        }
+
+        .news-item h3 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .news-date {
+            color: #999;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .news-item p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Ads Section */
+        .ads-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .ad-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-align: center;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-style: italic;
+        }
+
+        /* Footer Section */
+        .footer-section {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .footer-section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .footer-column h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column a {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-column a:hover {
+            color: #667eea;
+        }
+
+        .search-box {
+            margin-top: 20px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 2px solid #e0e0e0;
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+
+            .ads-section {
+                flex-direction: row;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 15px 20px;
+            }
+
+            .logo {
+                font-size: 22px;
+            }
+
+            .welcome-box, .news-section, .footer-section {
+                padding: 20px;
+            }
+
+            .ads-section {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
-
 <body>
-  <h1>Page Title</h1>
-</body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo">VidaJove</div>
+            <nav>
+                <a href="#home">Inicio</a>
+                <a href="#noticias">Noticias</a>
+                <a href="#eventos">Eventos</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+            <div class="menu-icon">☰</div>
+        </header>
 
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Welcome Section -->
+            <div class="welcome-box">
+                <h1>¡Bienvenido a VidaJove!</h1>
+                <p class="welcome-text">Tu espacio juvenil donde encontrarás toda la información relevante para jóvenes.</p>
+                <p class="welcome-text">Descubre eventos, noticias y recursos diseñados especialmente para ti.</p>
+                <p class="welcome-text">Únete a nuestra comunidad y mantente al día con todo lo que sucede en el mundo joven.</p>
+            </div>
+
+            <!-- News Section -->
+            <div class="news-section">
+                <h2>📰 Noticias y Eventos Recientes</h2>
+                
+                <div class="news-item">
+                    <span class="news-date">NOTICIA 1</span>
+                    <h3>Gran Festival Juvenil 2025</h3>
+                    <p>Se aproxima el evento más esperado del año. Música, arte y cultura en un solo lugar.</p>
+                </div>
+
+                <div class="news-item">
+                    <span class="news-date">NOTICIA 2</span>
+                    <h3>Nuevo Programa de Becas</h3>
+                    <p>Abierta la convocatoria para becas de estudio. Consulta los requisitos y plazos.</p>
+                </div>
+
+                <div class="news-item">
+                    <span class="news-date">NOTICIA 3</span>
+                    <h3>Taller de Emprendimiento</h3>
+                    <p>Aprende a desarrollar tu idea de negocio con expertos del sector.</p>
+                </div>
+
+                <p style="margin-top: 20px; text-align: center; color: #667eea; font-weight: bold;">
+                    ➜ Y así sucesivamente<br>
+                    Si 60 por página<br>
+                    Se abre en panel
+                </p>
+            </div>
+
+            <!-- Ads Section -->
+            <div class="ads-section">
+                <div class="ad-box">(Ad)</div>
+                <div class="ad-box">(Ad)</div>
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <div class="footer-section">
+            <h2>VidaJove</h2>
+            
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Página 1</h3>
+                    <ul>
+                        <li><a href="#">Filtros</a></li>
+                        <li><a href="#">Configuración</a></li>
+                        <li><a href="#">Perfil</a></li>
+                        <li><a href="#">Subir Noticia</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Recursos</h3>
+                    <ul>
+                        <li><a href="#">Convocatorias</a></li>
+                        <li><a href="#">Subvenciones</a></li>
+                        <li><a href="#">Notificaciones</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Buscador</h3>
+                    <div class="search-box">
+                        <input type="text" placeholder="Buscar criterios de búsqueda...">
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                © VidaJove 2025 - Todos los derechos reservados
+            </div>
+        </div>
+    </div>
+</body>
 </html>
