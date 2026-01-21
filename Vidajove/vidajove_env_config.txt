@@ -1,0 +1,56 @@
+# ============================================
+# VIDAJOVE - CONFIGURACIÓN DE ENTORNO
+# Archivo: .env
+# ============================================
+
+# IMPORTANTE: Este archivo NO debe subirse a GitHub
+# Añadir al .gitignore: .env
+
+# ============================================
+# CONFIGURACIÓN DE BASE DE DATOS
+# ============================================
+
+# URL de conexión a la base de datos
+# Formato: jdbc:mysql://[host]:[puerto]/[nombre_bd]?[parámetros]
+DB_URL=jdbc:mysql://localhost:3306/vidajove_db?useSSL=false&serverTimezone=UTC
+
+# Usuario de la aplicación (permisos limitados)
+DB_USER=vidajove_app
+
+# Contraseña del usuario de aplicación
+DB_PASSWORD=VJ_App2025!
+
+# ============================================
+# CONFIGURACIÓN ALTERNATIVA PARA PRODUCCIÓN
+# ============================================
+
+# Descomentar estas líneas para entorno de producción
+# DB_URL=jdbc:mysql://tu-servidor-produccion.com:3306/vidajove_db?useSSL=true&serverTimezone=UTC
+# DB_USER=vidajove_app_prod
+# DB_PASSWORD=TuContraseñaSeguraProducción
+
+# ============================================
+# CONFIGURACIÓN PARA DESARROLLO LOCAL
+# ============================================
+
+# Usuario administrador (solo para desarrollo/testing)
+# DB_ADMIN_USER=vidajove_admin
+# DB_ADMIN_PASSWORD=VJ_Admin2025!
+
+# Usuario de solo lectura (para reportes)
+# DB_READONLY_USER=vidajove_readonly
+# DB_READONLY_PASSWORD=VJ_Read2025!
+
+# ============================================
+# OTRAS CONFIGURACIONES
+# ============================================
+
+# Pool de conexiones (opcional)
+DB_POOL_SIZE=10
+DB_CONNECTION_TIMEOUT=30000
+
+# Nivel de log
+LOG_LEVEL=INFO
+
+# Puerto de la aplicación (si aplica)
+APP_PORT=8080
