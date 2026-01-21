@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias - VidaJove</title>
+    <link rel="stylesheet" href="vidajove_css.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="vidajove_index.html"><span class="logo-vida">Vida</span><span class="logo-jove">Jove</span></a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="vidajove_index.html">Inicio</a></li>
+                <li><a href="vidajove_noticias.html" class="active">Noticias</a></li>
+                <li><a href="vidajove_eventos.html">Eventos</a></li>
+                <li><a href="vidajove_contacto.html">Contacto</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Cambiar tema">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <a href="vidajove_login.html" class="btn-login">Iniciar Sesión</a>
+                <a href="vidajove_registro.html" class="btn-register">Registrarse</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Noticias y Novedades</h1>
+            <p>Mantente informado sobre todas las oportunidades para jóvenes</p>
+        </div>
+    </section>
+
+    <!-- Filters and Search -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters-container">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Buscar noticias...">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </div>
+
+                <div class="filter-group">
+                    <label for="categoryFilter">Categoría:</label>
+                    <select id="categoryFilter">
+                        <option value="todas">Todas</option>
+                        <option value="cultura">Cultura</option>
+                        <option value="deportes">Deportes</option>
+                        <option value="formacion">Formación</option>
+                        <option value="empleo">Empleo</option>
+                        <option value="ocio">Ocio</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Grid -->
+    <section class="news-section">
+        <div class="container">
+            <div class="news-grid">
+                <!-- Featured News -->
+                <article class="news-card featured">
+                    <div class="news-image">
+                        <span class="news-badge">Destacada</span>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-category cultura">Cultura</span>
+                        <h3>Gran Festival Juvenil 2025</h3>
+                        <p>El evento más esperado del año. Música, arte y cultura en un solo lugar. Este festival reunirá a los mejores artistas emergentes de la región y contará con actividades para todos los gustos.</p>
+                        <div class="news-meta">
+                            <span>📅 15 Ene 2025</span>
+                            <span>•</span>
+                            <span>👤 María García</span>
+                            <span>•</span>
+                            <span>👁️ 1,234 vistas</span>
+                        </div>
+                        <a href="#" class="read-more">Leer más →</a>
+                    </div>
+                </article>
+
+                <!-- Regular News -->
+                <article class="news-card">
+                    <div class="news-image"></div>
+                    <div class="news-content">
+                        <span class="news-category formacion">Formación</span>
+                        <h3>Nuevo Programa de Becas 2025</h3>
+                        <p>Convocatoria abierta hasta marzo. Consulta los requisitos y plazos. El programa ofrece ayudas de hasta 3000€ para estudiantes.</p>
+                        <div class="news-meta">
+                            <span>📅 14 Ene 2025</span>
+                            <span>•</span>
+                            <span>👤 María García</span>
+                        </div>
+                        <a href="#" class="read-more">Leer más →</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-image"></div>
+                    <div class="news-content">
+                        <span class="news-category empleo">Empleo</span>
+                        <h3>Taller de Emprendimiento</h3>
+                        <p>Desarrolla tu idea de negocio con expertos del sector. El taller incluye sesiones de mentoring personalizado.</p>
+                        <div class="news-meta">
+                            <span>📅 13 Ene 2025</span>
+                            <span>•</span>
+                            <span>👤 Carlos Martínez</span>
+                        </div>
+                        <a href="#" class="read-more">Leer más →</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-image"></div>
+                    <div class="news-content">
+                        <span class="news-category deportes">Deportes</span>
+                        <h3>Torneo de Fútbol Sala</h3>
+                        <p>Ya puedes inscribir a tu equipo en el torneo de fútbol sala más importante de la ciudad. Premios para los tres primeros.</p>
+                        <div class="news-meta">
+                            <span>📅 12 Ene 2025</span>
+                            <span>•</span>
+                            <span>👤 Carlos Martínez</span>
+                        </div>
+                        <a href="#" class="read-more">Leer más →</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-image"></div>
+                    <div class="news-content">
+                        <span class="news-category ocio">Ocio</span>
+                        <h3>Concierto Benéfico</h3>
+                        <p>Gran concierto benéfico con artistas locales. Todo lo recaudado irá destinado a proyectos sociales para jóvenes.</p>
+                        <div class="news-meta">
+                            <span>📅 11 Ene 2025</span>
+                            <span>•</span>
+                            <span>👤 María García</span>
+                        </div>
+                        <a href="#" class="read-more">Leer más →</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-image"></div>
+                    <div class="news-content">
+                        <span class="news-category formacion">Formación</span>
+                        <h3>Curso de Marketing Digital</h3>
+                        <p>Aprende las últimas técnicas de marketing digital con profesionales del sector. Curso gratuito de 40 horas.</p>
+                        <div class="news-meta">
+                            <span>📅 10 Ene 2025</span>
+                            <span>•</span>
+                            <span>👤 Laura Fernández</span>
+                        </div>
+                        <a href="#" class="read-more">Leer más →</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="pagination-btn">← Anterior</button>
+                <div class="pagination-numbers">
+                    <button class="pagination-number active">1</button>
+                    <button class="pagination-number">2</button>
+                    <button class="pagination-number">3</button>
+                    <span>...</span>
+                    <button class="pagination-number">10</button>
+                </div>
+                <button class="pagination-btn">Siguiente →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <span class="logo-vida">Vida</span><span class="logo-jove">Jove</span>
+                    </div>
+                    <p>Plataforma de notificaciones de ayudas del Plan Jove para jóvenes de 18 a 30 años.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="vidajove_index.html">Inicio</a></li>
+                        <li><a href="vidajove_noticias.html">Noticias</a></li>
+                        <li><a href="vidajove_eventos.html">Eventos</a></li>
+                        <li><a href="vidajove_contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Términos de Uso</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>info@vidajove.com</li>
+                        <li>+34 900 123 456</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 VidaJove. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="vidajove_js.js"></script>
+
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 4rem 2rem 3rem;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+
+        .filters-section {
+            background-color: var(--bg-secondary);
+            padding: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .filters-container {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 0.8rem 2.5rem 0.8rem 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-size: 1rem;
+        }
+
+        .search-box svg {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-tertiary);
+        }
+
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .filter-group label {
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        .filter-group select {
+            padding: 0.8rem 2rem 0.8rem 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .news-section {
+            padding: 3rem 2rem;
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .read-more:hover {
+            transform: translateX(5px);
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+
+        .pagination-btn {
+            padding: 0.8rem 1.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .pagination-btn:hover {
+            border-color: var(--primary-color);
+            background-color: var(--bg-secondary);
+        }
+
+        .pagination-numbers {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .pagination-number {
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .pagination-number:hover {
+            border-color: var(--primary-color);
+            background-color: var(--bg-secondary);
+        }
+
+        .pagination-number.active {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+        }
+    </style>
+</body>
+</html>
