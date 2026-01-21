@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - VidaJove</title>
+    <link rel="stylesheet" href="vidajove_css.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="vidajove_index.html"><span class="logo-vida">Vida</span><span class="logo-jove">Jove</span></a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="vidajove_index.html">Inicio</a></li>
+                <li><a href="vidajove_noticias.html">Noticias</a></li>
+                <li><a href="vidajove_eventos.html" class="active">Eventos</a></li>
+                <li><a href="vidajove_contacto.html">Contacto</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Cambiar tema">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <a href="vidajove_login.html" class="btn-login">Iniciar Sesión</a>
+                <a href="vidajove_registro.html" class="btn-register">Registrarse</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Próximos Eventos</h1>
+            <p>Descubre actividades y eventos pensados para jóvenes</p>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="events-section">
+        <div class="container">
+            <div class="events-grid">
+                <!-- Event Card 1 -->
+                <article class="event-card">
+                    <div class="event-date-badge">
+                        <div class="event-day">15</div>
+                        <div class="event-month">MAR</div>
+                    </div>
+                    <div class="event-image"></div>
+                    <div class="event-content">
+                        <div class="event-header">
+                            <span class="event-category cultura">Cultura</span>
+                            <span class="event-price">15€</span>
+                        </div>
+                        <h3>Festival Juvenil 2025</h3>
+                        <p>El mayor festival de música y cultura juvenil. Artistas emergentes, talleres creativos y mucho más.</p>
+                        
+                        <div class="event-details">
+                            <div class="event-detail">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                                <span>18:00 - 23:59</span>
+                            </div>
+                            <div class="event-detail">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <span>Auditorio Municipal</span>
+                            </div>
+                            <div class="event-detail">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                                <span>350 plazas disponibles</span>
+                            </div>
+                        </div>
+                        
+                        <button class="event-btn">Inscribirse Ahora</button>
+                    </div>
+                </article>
+
+                <!-- Event Card 2 -->
+                <article class="event-card">
+                    <div class="event-date-badge">
+                        <div class="event-day">10</div>
+                        <div class="event-month">FEB</div>
+                    </div>
+                    <div class="event-image"></div>
+                    <div class="event-content">
+                        <div class="event-header">
+                            <span class="event-category empleo">Empleo</span>
+                            <span class="event-price free">Gratis</span>
+                        </div>
+                        <h3>Taller de Emprendimiento</h3>
+                        <p>Aprende a crear tu startup desde cero. Sesiones con mentores expertos y networking con inversores.</p>
+                        
+                        <div class="event-details">
+                            <div class="event-detail">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                                <span>10:00 - 14:00</span>
+                            </div>
+                            <div class="event-detail">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <span>Centro de Innovación</span>
+                            </div>
+                            <div class="event-detail">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                                <span>15 plazas disponibles</span>
+                            </div>
+                        </div>
+                        
+                        <button class="event-btn">Inscribirse Ahora</button>
+                    </div>
+                </article>
+
+                <!-- Event Card 3 -->
+                <article class="event-card">
+                    <div class="event-date-badge">
+                        <div class="event-day">20</div>
+                        <div class="event-month">FEB</div>
+                    </div>
+                    <div class="event-image"></div>
+                    <div class="event-content">
+                        <div class="event-header">
+                            <span class="event-category deportes">Deportes</span>
+                            <span class="event-price">5€</span>
+                        </div>
+                        <h3>Torneo Fútbol Sala</h3>
+                        <p>Competición deportiva abierta a todos los niveles. Premios para los tres primeros clasificados.</p>
+                        
+                        <div class="event-details">
+                            <div class="event-detail">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                                <span>09:00 - 20:00</span>
+                            </div>
+                            <div class="event-detail">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <span>Polideportivo Norte</span>
+                            </div>
+                            <div class="event-detail">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                                <span>60 plazas disponibles</span>
+                            </div>
+                        </div>
+                        
+                        <button class="event-btn">Inscribirse Ahora</button>
+                    </div>
+                </article>
+
+                <!-- Event Card 4 -->
+                <article class="event-card">
+                    <div class="event-date-badge">
+                        <div class="event-day">05</div>
+                        <div class="event-month">MAR</div>
+                    </div>
+                    <div class="event-image"></div>
+                    <div class="event-content">
+                        <div class="event-header">
+                            <span class="event-category formacion">Formación</span>
+                            <span class="event-price free">Gratis</span>
+                        </div>
+                        <h3>Curso de Marketing Digital</h3>
+                        <p>Aprende las últimas técnicas de marketing digital con profesionales del sector. Certificado incluido.</p>
+                        
+                        <div class="event-details">
+                            <div class="event-detail">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                                <span>16:00 - 20:00</span>
+                            </div>
+                            <div class="event-detail">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <span>Aula Virtual</span>
+                            </div>
+                            <div class="event-detail">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                                <span>45 plazas disponibles</span>
+                            </div>
+                        </div>
+                        
+                        <button class="event-btn">Inscribirse Ahora</button>
+                    </div>
+                </article>
+
+                <!-- Event Card 5 -->
+                <article class="event-card">
+                    <div class="event-date-badge">
+                        <div class="event-day">12</div>
+                        <div class="event-month">MAR</div>
+                    </div>
+                    <div class="event-image"></div>
+                    <div class="event-content">
+                        <div class="event-header">
+                            <span class="event-category ocio">Ocio</span>
+                            <span class="event-price">10€</span>
+                        </div>
+                        <h3>Concierto Benéfico</h3>
+                        <p>Gran concierto benéfico con artistas locales. Recaudación destinada a proyectos sociales para jóvenes.</p>
+                        
+                        <div class="event-details">
+                            <div class="event-detail">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                                <span>20:00 - 23:00</span>
+                            </div>
+                            <div class="event-detail">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <span>Teatro Principal</span>
+                            </div>
+                            <div class="event-detail">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                                <span>200 plazas disponibles</span>
+                            </div>
+                        </div>
+                        
+                        <button class="event-btn">Inscribirse Ahora</button>
+                    </div>
+                </article>
+
+                <!-- Event Card 6 -->
+                <article class="event-card">
+                    <div class="event-date-badge">
+                        <div class="event-day">18</div>
+                        <div class="event-month">MAR</div>
+                    </div>
+                    <div class="event-image"></div>
+                    <div class="event-content">
+                        <div class="event-header">
+                            <span class="event-category cultura">Cultura</span>
+                            <span class="event-price free">Gratis</span>
+                        </div>
+                        <h3>Exposición de Arte Joven</h3>
+                        <p>Muestra de trabajos de artistas emergentes menores de 30 años. Todas las disciplinas artísticas.</p>
+                        
+                        <div class="event-details">
+                            <div class="event-detail">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                                <span>11:00 - 21:00</span>
+                            </div>
+                            <div class="event-detail">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <span>Museo de Arte Contemporáneo</span>
+                            </div>
+                            <div class="event-detail">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                                <span>Entrada libre</span>
+                            </div>
+                        </div>
+                        
+                        <button class="event-btn">Más Información</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <span class="logo-vida">Vida</span><span class="logo-jove">Jove</span>
+                    </div>
+                    <p>Plataforma de notificaciones de ayudas del Plan Jove para jóvenes de 18 a 30 años.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="vidajove_index.html">Inicio</a></li>
+                        <li><a href="vidajove_noticias.html">Noticias</a></li>
+                        <li><a href="vidajove_eventos.html">Eventos</a></li>
+                        <li><a href="vidajove_contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Términos de Uso</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>info@vidajove.com</li>
+                        <li>+34 900 123 456</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 VidaJove. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="vidajove_js.js"></script>
+
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 4rem 2rem 3rem;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+
+        .events-section {
+            padding: 3rem 2rem;
+        }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .event-card {
+            background-color: var(--bg-color);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px var(--shadow);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px var(--shadow-lg);
+        }
+
+        .event-date-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background-color: white;
+            padding: 0.5rem 0.8rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            z-index: 10;
+        }
+
+        .event-day {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            line-height: 1;
+        }
+
+        .event-month {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+
+        .event-image {
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        }
+
+        .event-content {
+            padding: 1.5rem;
+        }
+
+        .event-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .event-category {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: white;
+        }
+
+        .event-price {
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+
+        .event-price.free {
+            color: var(--success);
+        }
+
+        .event-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-primary);
+        }
+
+        .event-content > p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .event-details {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .event-detail {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .event-detail svg {
+            color: var(--primary-color);
+            flex-shrink: 0;
+        }
+
+        .event-btn {
+            width: 100%;
+            padding: 0.9rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .event-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px var(--shadow-lg);
+        }
+
+        @media (max-width: 768px) {
+            .events-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</body>
+</html>
